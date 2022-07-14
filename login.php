@@ -2,29 +2,35 @@
 require('crud/connexion.php');
 session_start();
 
-
-if (isset($_POST['username']) & isset($_POST['password'])) {
+$err_de_con = "";
+if (isset($_POST['username']) && isset($_POST['password'])) {
   try {
     $sth = $db->prepare("SELECT * FROM users WHERE username=:username");
     $sth->bindParam(':username', $_POST['username']);
     $sth->execute();
 
     $row = $sth->fetch(PDO::FETCH_ASSOC);
-    var_dump($row);
-    $hash = $row['password'];
-    var_dump($hash);
-    if (password_verify($_POST['password'], $hash)) {
-      $_SESSION['id']   = $row['id'];
-      $_SESSION['username'] = $row['username'];
-      header('Location: index.php');
+
+
+    if ($row == false) {
+      $err_de_con = "Mauvais mot de passe ou username.";
     } else {
-      echo "Mauvais mot de passe our username.";
+      $password_to_hash = $_POST['password'] . PASS;
+
+      $password = md5($password_to_hash);
+      $hash = $row['password'];
+      // password_verify($password, $hash)
+      if ($password === $hash) {
+        $_SESSION['id']   = $row['id'];
+        $_SESSION['username'] = $row['username'];
+        header('Location: index.php');
+      } else {
+        $err_de_con = "Mauvais mot de passe incorecte.";
+      }
     }
   } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
   }
-} else {
-  echo "";
 }
 ?>
 <!DOCTYPE html>
@@ -42,6 +48,11 @@ if (isset($_POST['username']) & isset($_POST['password'])) {
         include 'navbar.php'; ?>
 
 <body>
+  <?php
+
+  echo $err_de_con;
+
+  ?>
   <form action="" method="POST" class="columns centre-element">
     <a>pseudo</a>
     <input type="text" placeolder="Username" name="username"></input>

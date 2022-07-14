@@ -14,7 +14,7 @@
   define("DBUSER", "root");
   define("DBPASS", "");
   define("DBNAME", "rubiks");
-
+  define("PASS", "ldLPp2NZ7JzkO7w88WNhzgGk5zC");
   $dsn = "mysql:dbname=" . DBNAME . ";host=" . DBHOST;
 
 
@@ -24,7 +24,7 @@
   } catch (PDOException $e) {
     die("Erreur : " . $e->getMessage());
   }
-  
+
   ?>
 </body>
 
