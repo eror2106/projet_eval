@@ -1,0 +1,25 @@
+footer {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  margin-bottom: 0px;
+}
+#primaire {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10%;
+  margin-bottom: 0%;
+}
+.ligne {
+  display: flex;
+  flex-direction: column;
+  margin: 9%;
+}
+.ligne > strong {
+  color: blue;
+}
+
+.ligne > p > a {
+  color: aliceblue;
+  text-decoration: none;
+}

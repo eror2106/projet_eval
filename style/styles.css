@@ -1,0 +1,92 @@
+#logomenu {
+  width: 2rem;
+  height: 2rem;
+}
+.rows {
+  display: flex;
+  flex-direction: row;
+}
+.presantation{
+  margin-top: 5%;
+  margin-left:6vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+.explication {
+  margin: 10%;
+  margin-top: 8%;
+}
+.cube {
+  margin-left: 20% !important;
+  margin-right: 8% !important;
+}
+.cube > img {
+  margin: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-left: 40%;
+  margin-top: 16%;
+  aspect-ratio: auto;
+  height: 50%;
+  width: auto;
+}
+.wraps {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rows > li > a {
+  margin-right: 2rem;
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.slider {
+  height: 70vh;
+  position: relative;
+}
+.slider img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.slider img.active {
+  opacity: 1;
+}
+.suivant,
+.precedent {
+  color: white;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.suivant {
+  right: 1rem;
+}
+.precedent {
+  left: 1rem;
+}
+
+.centre-element{
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 15px;
+  width: 50%;
+}
