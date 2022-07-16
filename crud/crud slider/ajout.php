@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <?php include "../../navbar.php";
+  <?
   include "../navbar_admin.php"; ?>
   <div class="container col-md-5 col-md-offset-3">
     <div class="panel panel-info">

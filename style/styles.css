@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 #logomenu {
   width: 2rem;
   height: 2rem;
@@ -17,21 +21,19 @@
   flex-direction: column;
 }
 .explication {
-  margin: 10%;
+  margin-right: 20% !important;
   margin-top: 8%;
 }
 .cube {
-  margin-left: 20% !important;
+  margin-left: 0% !important;
   margin-right: 8% !important;
 }
 .cube > img {
-  margin: 5%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   margin-left: 40%;
-  margin-top: 16%;
-  aspect-ratio: auto;
-  height: 50%;
+  margin-top: 35% !important;
+  height: 80%;
   width: auto;
 }
 .wraps {
@@ -45,11 +47,6 @@
   color: rgb(255, 255, 255);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .slider {
   height: 70vh;
   position: relative;
@@ -90,3 +87,26 @@
   padding: 15px;
   width: 50%;
 }
+span > #number{
+  display: absolute !important;
+  color: aqua;
+}
+button{
+  width: max-content;
+  background-color: rgb(55, 55, 174);
+  border: none;
+  padding: 15px;
+}
+button>a{
+  color: aliceblue;
+  text-decoration: none;
+}
+.add:hover{
+  color: white;
+}
+
+@media only screen and (max-width: 640px) {
+    .rows {
+      display: flex;
+      flex-direction: column;
+    }}

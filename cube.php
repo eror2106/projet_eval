@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['role'])) {
+  $_SESSION['role'] = array();
+}
 $ref = $_GET['ref'];
 ?>
 
@@ -25,13 +28,13 @@ $ref = $_GET['ref'];
   include 'navbar.php';
   include 'crud/connexion.php';
 
+
   $sql = "SELECT * FROM `stock`WHERE `nom`='$ref'";
   $requette = $db->query($sql);
 
-
   $user = $requette->fetch(PDO::FETCH_ASSOC);
   ?>
-  <div class="rows mt-5">
+  <div class="rows mt-5 justify-content-around">
     <div class="cube">
 
       <img src="img/shop/<?php echo $user['images'] ?>" alt="" />
@@ -58,14 +61,24 @@ $ref = $_GET['ref'];
 
           echo $user['description'];
           ?></p>
+      <?php
+      include 'crud/crud user/con_user.php';
 
-      <button><a href="addpanier.php?id=<?= $user['id'] ?>">add</a></button>
+
+
+      if ('user' === $_SESSION['role']) { ?>
+        <button><a class="add" href="addpanier.php?id=<?= $user['id'] ?>">ajouter au panier</a></button>
+      <?php }
+      if ('admin' === $_SESSION['role']) { ?>
+        <button><a class="add" href="addpanier.php?id=<?= $user['id'] ?>">ajouter au panier</a></button>
+      <?php }
+      if ('admin' != $_SESSION['role'] && 'user' != $_SESSION['role'] || empty($_SESSION['role'])) { ?>
+        <button><a class="add" href="login.php">ajouter au panier</a></button>
+      <?php
+      }
+      ?>
     </div>
   </div class="ms-5">
-  <textarea id="w3review" name="w3review" rows="4" cols="100" placeholder="Commentaire">
-
-    </textarea>
-  <a href="#" class="btn btn-outline-dark"> Commenter</a>
   <?php
   include 'footer.php';
   ?>

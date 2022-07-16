@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <?php include "../../navbar.php";
+  <?php 
   include "../navbar_admin.php";
   include '../connexion.php'; ?>
   <br><br>

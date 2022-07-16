@@ -1,28 +1,22 @@
 <?php
 require('crud/connexion.php');
+include 'crud/crud user/con_user.php';
 session_start();
 
 $err_de_con = "";
 if (isset($_POST['username']) && isset($_POST['password'])) {
   try {
-    $sth = $db->prepare("SELECT * FROM users WHERE username=:username");
-    $sth->bindParam(':username', $_POST['username']);
-    $sth->execute();
-
-    $row = $sth->fetch(PDO::FETCH_ASSOC);
-
-
     if ($row == false) {
       $err_de_con = "Mauvais mot de passe ou username.";
     } else {
       $password_to_hash = $_POST['password'] . PASS;
-
       $password = md5($password_to_hash);
       $hash = $row['password'];
-      // password_verify($password, $hash)
       if ($password === $hash) {
         $_SESSION['id']   = $row['id'];
         $_SESSION['username'] = $row['username'];
+        $_SESSION['role'] = array();
+        $_SESSION['role'] = $row['role'];
         header('Location: index.php');
       } else {
         $err_de_con = "Mauvais mot de passe incorecte.";
@@ -48,9 +42,19 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         include 'navbar.php'; ?>
 
 <body>
+  <?php if (!empty($err_de_con)) {
+  ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <p class="text-center"><?php
+                              echo $err_de_con;
+                              ?></p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
   <?php
+  }
 
-  echo $err_de_con;
+
+
 
   ?>
   <form action="" method="POST" class="columns centre-element">

@@ -46,10 +46,13 @@
 
   <div class="wraps presantation">
     <div class="card" style="width: 18rem;">
-      <img src="img/rubiks-cube-145949_1280-1968539853.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text text-center">Cube</p>
-      </div>
+      <a href="shop.php">
+        <img src="img/rubiks-cube-145949_1280-1968539853.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-center">Cube</p>
+        </div>
+      </a>
+
     </div>
     <div class="card" style="width: 18rem;">
       <img src="img/rubiks-cube-145949_1280-1968539853.png" class="card-img-top" alt="...">
