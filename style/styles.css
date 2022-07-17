@@ -6,36 +6,13 @@
   width: 2rem;
   height: 2rem;
 }
-.rows {
-  display: flex;
-  flex-direction: row;
-}
-.presantation{
-  margin-top: 5%;
-  margin-left:6vw;
-  display: flex;
-  justify-content: space-evenly;
-}
-.columns {
-  display: flex;
-  flex-direction: column;
-}
-.explication {
-  margin-right: 20% !important;
-  margin-top: 8%;
-}
+
+
 .cube {
   margin-left: 0% !important;
   margin-right: 8% !important;
 }
-.cube > img {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  margin-left: 40%;
-  margin-top: 35% !important;
-  height: 80%;
-  width: auto;
-}
+
 .wraps {
   display: flex;
   flex-wrap: wrap;
@@ -105,8 +82,3 @@ button>a{
   color: white;
 }
 
-@media only screen and (max-width: 640px) {
-    .rows {
-      display: flex;
-      flex-direction: column;
-    }}

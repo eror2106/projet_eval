@@ -21,10 +21,29 @@ p{
   text-align:right;
   margin-right: 10%;
 }
-button{
-  margin-left: 80% !important;
+.achat{
+  margin-left: 82% !important;
   background-color: rgb(55, 55, 174);
   color: aliceblue;
   border: none;
   padding: 15px;
+}
+
+@media only screen and (max-width: 730px) {
+  .achat{
+    margin-left: 70% !important;
+    
+  
+  }
+  
+
+}
+@media only screen and (max-width: 630px) {
+  .achat{
+    margin-left: 60% !important;
+    
+  
+  }
+  
+
 }
