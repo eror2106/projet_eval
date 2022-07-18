@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['role'])) {
   $_SESSION['role'] = array();
 }
-$ref = $_GET['ref'];
+
 ?>
 
 <!DOCTYPE html>
@@ -24,38 +24,31 @@ $ref = $_GET['ref'];
   include 'crud/connexion.php';
 
 
-  $sql = "SELECT * FROM `stock`WHERE `nom`='$ref'";
+  $sql = "SELECT * FROM `stock`";
   $requette = $db->query($sql);
 
   $user = $requette->fetch(PDO::FETCH_ASSOC);
   ?>
-  <div class="rows">
+
+
+  <div class="rows mt-5 justify-content-around">
     <div class="cube">
 
-      <img src="img/shop/<?php echo $user['images'] ?>" alt="" />
+      <img src="img/packs/pack_intermediaire.jpg" alt="image non charger">
     </div>
     <div class="columns explication">
 
-      <h1><?php
-
-          echo $user['nom'];
-          ?>
+      <h1>pack intermediaire
       </h1>
-      <p><?php
+      <p>15 €
 
-          echo $user['prix'] . " €";
 
-          ?>
       </p>
-      <p><?php
-
-          echo $user['model'];
-
-          ?></p>
-      <p><?php
-
-          echo $user['description'];
-          ?></p>
+      <p>cube profesionelle et lubrifiant a base d'eau avec tournevis de reglage et un 4x4 de shengshou</p>
+      <p>ce packs contient un cube de la marque MGC version 1 qui saura vous accompagner durant vos première résolution.
+        avec ce pack nous vous proposons un lubrifiant afin de commencer lart du speed cubing.
+        on inclus un tournevis vous permetant de regler la tension du cube.
+        et aussi un 4x4 parfait pour debuter le 4x4</p>
       <?php
       include 'crud/crud user/con_user.php';
 

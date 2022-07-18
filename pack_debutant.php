@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['role'])) {
   $_SESSION['role'] = array();
 }
-$ref = $_GET['ref'];
+
 ?>
 
 <!DOCTYPE html>
@@ -24,38 +24,29 @@ $ref = $_GET['ref'];
   include 'crud/connexion.php';
 
 
-  $sql = "SELECT * FROM `stock`WHERE `nom`='$ref'";
+  $sql = "SELECT * FROM `stock`";
   $requette = $db->query($sql);
 
   $user = $requette->fetch(PDO::FETCH_ASSOC);
   ?>
-  <div class="rows">
+
+
+  <div class="rows mt-5 justify-content-around">
     <div class="cube">
 
-      <img src="img/shop/<?php echo $user['images'] ?>" alt="" />
+      <img src="img/packs/packs_debutant.jpg" alt="image non charger">
     </div>
     <div class="columns explication">
 
-      <h1><?php
-
-          echo $user['nom'];
-          ?>
+      <h1>packs débutant
       </h1>
-      <p><?php
+      <p>10 €
 
-          echo $user['prix'] . " €";
 
-          ?>
       </p>
-      <p><?php
-
-          echo $user['model'];
-
-          ?></p>
-      <p><?php
-
-          echo $user['description'];
-          ?></p>
+      <p>cube profesionelle et lubrifiant a base d'eau</p>
+      <p>ce packs contient un cube de la marque MGC version 1 qui saura vous accompagner durant vos première résolution.
+        avec ce pack nous vous proposons un lubrifiant afin de commencer lart du speed cubing.</p>
       <?php
       include 'crud/crud user/con_user.php';
 

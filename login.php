@@ -1,31 +1,12 @@
 <?php
-require('crud/connexion.php');
+require 'crud/connexion.php';
 include 'crud/crud user/con_user.php';
 session_start();
 
 $err_de_con = "";
-if (isset($_POST['username']) && isset($_POST['password'])) {
-  try {
-    if ($row == false) {
-      $err_de_con = "Mauvais mot de passe ou username.";
-    } else {
-      $password_to_hash = $_POST['password'] . PASS;
-      $password = md5($password_to_hash);
-      $hash = $row['password'];
-      if ($password === $hash) {
-        $_SESSION['id']   = $row['id'];
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['role'] = array();
-        $_SESSION['role'] = $row['role'];
-        header('Location: index.php');
-      } else {
-        $err_de_con = "Mauvais mot de passe incorecte.";
-      }
-    }
-  } catch (PDOException $e) {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
-  }
-}
+$pseudo = "";
+$mdp = "";
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -61,7 +42,35 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <input type="password" placeolder="Password" name="password"></input>
     <button type="submit">Connexion</button>
   </form>
+
   <?php
+  if (isset($_POST['username'])) {
+    $pseudo = htmlspecialchars($_POST['username']);
+  }
+  if (isset($_POST['password'])) {
+    $mdp = htmlspecialchars($_POST['password']);
+  }
+
+  $sth = $db->prepare("SELECT * FROM users WHERE `username`='$pseudo' ");
+  $sth->execute();
+
+  $row = $sth->fetch(PDO::FETCH_ASSOC);
+
+  if (!empty($row)) {
+    if (md5($mdp . PASS) == $row['password']) {
+      if (!isset($_SESSION['role'])) {
+        $_SESSION['role'] = array();
+        $_SESSION['role'] = $row['role'];
+      } else {
+        $_SESSION['role'] = $row['role'];
+      }
+      header('Location: index.php');
+    } else {
+      $err_de_con = "mdp inconue";
+    }
+  } else {
+    $err_de_con = "pseudo inconue";
+  }
   include 'footer.php'; ?>
 </body>
 

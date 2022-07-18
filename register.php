@@ -8,8 +8,7 @@ if (!empty($_POST['username'])) {
   $pseudo = htmlspecialchars($_POST['username']);
 }
 if (isset($_POST["role"])) {
-  $role = "admin";
-} else {
+
   $role = "user";
 }
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -67,10 +66,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <input type="password" placeolder="Password" name="password"></input>
     <a>confirmer le mot de passe</a>
     <input type="password" placeolder="Password" name="confirm_password"></input>
-    <div class="d-flex flex-row">
-      <input type="checkbox" name="role" value="role">
-      <label for="">veux tu devenir administrateur du site</label>
-    </div>
+
     <button type="submit">S'inscrire</button>
   </form>
   <?php

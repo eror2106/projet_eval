@@ -16,6 +16,8 @@
           <a class="nav-link text-white" href="../crud shop/delete.php">Delete</a>
         </li>
 
+
+
         <li class="nav-item ">
           <a class="nav-link text-white active" aria-current="page" href="../crud slider/ajout.php">ajout slider</a>
         </li>

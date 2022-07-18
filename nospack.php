@@ -14,29 +14,29 @@
   ?>
   <div class="wraps" id="presantation">
     <div class="card cartes" style="width: 18rem">
-      <img src="img/carousel-slider-3423608208.png" class="card-img-top" alt="..." />
+      <img src="img/packs/packs_debutant.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Nos packs débutant</h5>
         <p>
           vous souhaitez apprendre a résoudre le puzzle le plus connu au monde
           cliquez ci-dessous on vous aide
         </p>
-        <a href="#" class="btn btn-outline-dark"> packs débutant</a>
+        <a href="pack_debutant.php" class="btn btn-outline-dark"> packs débutant</a>
       </div>
     </div>
     <div class="card cartes" style="width: 18rem">
-      <img src="img/carousel-slider-3423608208.png" class="card-img-top" alt="..." />
+      <img src="img/packs/pack_intermediaire.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Nos packs intermediaire</h5>
         <p>
           vous avez un nivau pour résoudre le rubikscube et vous shouaitez
           ameliorer vos temps
         </p>
-        <a href="#" class="btn btn-outline-dark"> packs intermediaire</a>
+        <a href="pack_intermediaire.php" class="btn btn-outline-dark"> packs intermediaire</a>
       </div>
     </div>
     <div class="card cartes" style="width: 18rem">
-      <img src="img/carousel-slider-3423608208.png" class="card-img-top" alt="..." />
+      <img src="img/packs/pack_expert.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Nos packs expert</h5>
         <p>
@@ -44,7 +44,7 @@
           shouaitez ameliorer vos temps on vous montre des rubiks cube regler
           pour vos besoin
         </p>
-        <a href="#" class="btn btn-outline-dark">packs expert</a>
+        <a href="pack_expert.php" class="btn btn-outline-dark">packs expert</a>
       </div>
     </div>
     <div class="card cartes" id="accessoire" style="width: 18rem">

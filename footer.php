@@ -8,7 +8,7 @@
       <p><a href="#">FAQ</a></p>
       <p><a href="#">termes et conditions</a></p>
     </div>
-    <div class="ligne"><strong>GET TO KNOW US</strong></div>
+
     <div class="ligne">
       <strong>PAYMENT</strong>
       <p><a href="#">instruction de paiment</a></p>

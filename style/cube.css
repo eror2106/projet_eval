@@ -4,15 +4,16 @@
 }
 
 .cube {
-  margin-left: 0% !important;
-  margin-right: 8% !important;
+  margin-left: 10% !important;
+  width: 50%;
+  margin-right: 0% !important;
 }
 .cube > img {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  margin-left: 40%;
-  margin-top: 35% !important;
-  height: 80%;
+  margin-left: 20%;
+  margin-top: 15% !important;
+  height: 30%;
   width: auto;
 }
 .rows {
@@ -31,7 +32,7 @@
 }
 
 .explication {
-  margin-right: 20% !important;
+  margin-right: 5% !important;
   margin-top: 8%;
 }
 @media only screen and (max-width: 640px) {
