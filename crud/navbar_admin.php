@@ -26,6 +26,9 @@
           <a class="nav-link text-white" href="../crud slider/delete.php">Delete slider</a>
         </li>
 
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="../crud user/utilisateurs.php">utilisateurs</a>
+        </li>
 
         <li class="nav-item ">
           <a class="nav-link text-white" href="../../index.php">quiter</a>
