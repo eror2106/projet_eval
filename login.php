@@ -6,7 +6,33 @@ session_start();
 $err_de_con = "";
 $pseudo = "";
 $mdp = "";
+if (isset($_POST['username'])) {
+  $pseudo = htmlspecialchars($_POST['username']);
+}
+if (isset($_POST['password'])) {
+  $mdp = htmlspecialchars($_POST['password']);
+}
 
+$sth = $db->prepare("SELECT * FROM users WHERE `username`='$pseudo' ");
+$sth->execute();
+
+$row = $sth->fetch(PDO::FETCH_ASSOC);
+
+if (!empty($row)) {
+  if (md5($mdp . PASS) == $row['password']) {
+    if (!isset($_SESSION['role'])) {
+      $_SESSION['role'] = array();
+      $_SESSION['role'] = $row['role'];
+    } else {
+      $_SESSION['role'] = $row['role'];
+    }
+    header('Location: index.php');
+  } else {
+    $err_de_con = "mdp inconue";
+  }
+} else {
+  $err_de_con = "pseudo inconue";
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -44,33 +70,7 @@ $mdp = "";
   </form>
 
   <?php
-  if (isset($_POST['username'])) {
-    $pseudo = htmlspecialchars($_POST['username']);
-  }
-  if (isset($_POST['password'])) {
-    $mdp = htmlspecialchars($_POST['password']);
-  }
 
-  $sth = $db->prepare("SELECT * FROM users WHERE `username`='$pseudo' ");
-  $sth->execute();
-
-  $row = $sth->fetch(PDO::FETCH_ASSOC);
-
-  if (!empty($row)) {
-    if (md5($mdp . PASS) == $row['password']) {
-      if (!isset($_SESSION['role'])) {
-        $_SESSION['role'] = array();
-        $_SESSION['role'] = $row['role'];
-      } else {
-        $_SESSION['role'] = $row['role'];
-      }
-      header('Location: index.php');
-    } else {
-      $err_de_con = "mdp inconue";
-    }
-  } else {
-    $err_de_con = "pseudo inconue";
-  }
   include 'footer.php'; ?>
 </body>
 

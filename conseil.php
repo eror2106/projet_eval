@@ -19,7 +19,7 @@
   foreach ($user as $article => $value) {
   }
   ?>
-  <div class="wraps" id="presantation">
+  <div class="wraps text-center" id="presantation">
     <p><?php echo $value['text']; ?></p>
 
 

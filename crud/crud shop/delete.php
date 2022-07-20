@@ -10,31 +10,33 @@
 </head>
 
 <body>
-  <?php 
+  <?php
   include "../navbar_admin.php";
   include '../connexion.php'; ?>
   <br><br>
+  <div class="mx-5 d-flex flex-wrap">
+
+    <?php
+
+    $sql = "SELECT * FROM `stock` ";
+    $requette = $db->query($sql);
 
 
-  <?php
+    $user = $requette->fetchAll(PDO::FETCH_ASSOC);
 
-  $sql = "SELECT * FROM `stock` ";
-  $requette = $db->query($sql);
+    for ($i = 0; $i <= sizeof($user) - 1; $i++) {
+    ?>
 
+      <?php
 
-  $user = $requette->fetchAll(PDO::FETCH_ASSOC);
-
-  for ($i = 0; $i <= sizeof($user) - 1; $i++) {
-
-    $img = 0;
-    foreach ($user[$i] as $article => $value) {
-      if ($img == 4) {
+      $img = 0;
+      foreach ($user[$i] as $article => $value) {
+        if ($img == 4) {
 
 
 
-  ?>
-        <div class="mx-5 d-flex flex-wrap">
-          <div class="card cartes" style="width: 18rem">
+      ?>
+          <div class="card cartes mx-2" style="width: 18rem">
             <img src="../../img/shop/<?php echo $value; ?>
                             " class="card-img-top" alt="..." />
             <div class="card-body">
@@ -65,17 +67,17 @@
 
             </div>
           </div>
-        </div>
 
 
-  <?php
+    <?php
+        }
+        $img++;
       }
-      $img++;
-    }
 
-    $res = 0;
-  }
-  ?>
+      $res = 0;
+    } ?>
+  </div>
+
 
   <form method="post">
     <div class="mx-5">
@@ -95,10 +97,8 @@
         $nom = "";
 
 
-        if (empty($_POST['nom'])) {
-          echo "il manque le nom";
-          die();
-        } else {
+        if (isset($_POST['nom'])) {
+
           $nom = htmlspecialchars($_POST['nom']);
 
           $sql = "SELECT `images` FROM `stock`WHERE `nom`='$nom' ";
