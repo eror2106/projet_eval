@@ -15,7 +15,7 @@ if (!isset($_SESSION['role'])) {
   include "head.php";
   ?>
 
-  <title>Document</title>
+  <title>Pack expert</title>
 </head>
 
 <body>

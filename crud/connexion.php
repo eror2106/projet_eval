@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -15,27 +15,20 @@
   define("DBPASS", "");
   define("DBNAME", "rubiks");
   define("PASS", "ldLPp2NZ7JzkO7w88WNhzgGk5zC");
-  $dsn = "mysql:dbname=" . DBNAME . ";host=" . DBHOST;
-
-
-
-
-
+  $dsn = "mysql:host=" . DBHOST  . ";dbname=" . DBNAME;
 
   try {
+    if (strcmp($_SERVER['ENVIRONMENT_TYPE'], "developement") == 0) {
 
 
-
-    if (strcmp($_SERVER['ENVIRONMENT_TYPE'], "development") == 0) {
       $db = new PDO($dsn, DBUSER, DBPASS);
       $db->exec("SET NAMES utf8");
     }
     if (strcmp($_SERVER['ENVIRONMENT_TYPE'], "production") == 0) {
-      $db = new PDO($dsn, $_SERVER['DB_USER'], $_SERVER['DB_PASSWORD']);
+
+      $db = new PDO($dsn, DBUSER, DBPASS);
       $db->exec("SET NAMES utf8");
-    } /*
-    $db = new PDO($dsn, DBUSER, DBPASS);
-    $db->exec("SET NAMES utf8");*/
+    }
   } catch (PDOException $e) {
     die("Erreur : " . $e->getMessage());
   }

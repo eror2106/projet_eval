@@ -5,7 +5,9 @@
   <?php
   include "head.php";
   ?>
-  <title>Document</title>
+  <title>Boutique
+    
+  </title>
 </head>
 
 <body>

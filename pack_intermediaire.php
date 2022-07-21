@@ -15,7 +15,7 @@ if (!isset($_SESSION['role'])) {
   include "head.php";
   ?>
 
-  <title>Document</title>
+  <title>Pack 	intermédiaire</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['role'])) {
     </div>
     <div class="columns explication">
 
-      <h1>pack intermediaire
+      <h1>pack 	intermédiaire
       </h1>
       <p>15 €
 

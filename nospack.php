@@ -5,7 +5,7 @@
   <?php
   include "head.php";
   ?>
-  <title>Document</title>
+  <title>Nos packs</title>
 </head>
 
 <body>
@@ -27,12 +27,12 @@
     <div class="card cartes" style="width: 18rem">
       <img src="img/packs/pack_intermediaire.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
-        <h5 class="card-title">Nos packs intermediaire</h5>
+        <h5 class="card-title">Nos packs 	intermédiaire</h5>
         <p>
           vous avez un nivau pour résoudre le rubikscube et vous shouaitez
           ameliorer vos temps
         </p>
-        <a href="pack_intermediaire.php" class="btn btn-outline-dark"> packs intermediaire</a>
+        <a href="pack_intermediaire.php" class="btn btn-outline-dark"> packs 	intermédiaire</a>
       </div>
     </div>
     <div class="card cartes" style="width: 18rem">

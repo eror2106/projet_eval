@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <title>Document</title>
+  <title>utilisateur</title>
 </head>
 
 <body>
@@ -26,12 +26,16 @@
     ?>
 
       <div class="card mx-5 mt-5" style="width: 18rem;">
-        <div class="card-body">
+        <div class="card-body"><?php $nom = $row[$i]['username']; ?>
           <h5 class="card-title">pseudo : <?php echo $row[$i]['username']; ?></h5>
           <h6 class="card-subtitle mb-2 ">role : <?php echo $row[$i]['role']; ?></h6>
-          <form method="post">
+          <a name="id" href="edit_user_admin.php?ref=<?php
+                                                echo $row[$i]['id'];
+                                                ?>">passer en admin</a>
+                                                <a name="id" href="edit_user_user.php?ref=<?php
+                                                echo $row[$i]['id'];
+                                                ?>">passer en user</a>
 
-          </form>
 
         </div>
       </div>
