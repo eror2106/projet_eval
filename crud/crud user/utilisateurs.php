@@ -29,12 +29,13 @@
         <div class="card-body"><?php $nom = $row[$i]['username']; ?>
           <h5 class="card-title">pseudo : <?php echo $row[$i]['username']; ?></h5>
           <h6 class="card-subtitle mb-2 ">role : <?php echo $row[$i]['role']; ?></h6>
-          <a name="id" href="edit_user_admin.php?ref=<?php
-                                                echo $row[$i]['id'];
-                                                ?>">passer en admin</a>
-                                                <a name="id" href="edit_user_user.php?ref=<?php
-                                                echo $row[$i]['id'];
-                                                ?>">passer en user</a>
+
+          <a name="id" href="edit_user_admin.php?ref=<?php echo $row[$i]['id']; ?>"> <button>passer en admin</button> </a>
+          <a name="id" href="edit_user_user.php?ref=<?php
+                                                    echo $row[$i]['id'];
+                                                    ?>"> <button>passer en utilisateur</button> </a>
+          <br>
+
 
 
         </div>
