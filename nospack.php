@@ -47,20 +47,6 @@
         <a href="pack_expert.php" class="btn btn-outline-dark">packs expert</a>
       </div>
     </div>
-    <div class="card cartes" id="accessoire" style="width: 18rem">
-      <img src="img/carousel-slider-3423608208.png" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-
-        <a href="#" class="btn btn-outline-dark"> accessoire</a>
-      </div>
-    </div>
-    <div class="card cartes" style="width: 18rem">
-      <img src="img/carousel-slider-3423608208.png" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <a href="shop.php" class="btn btn-outline-dark">shop</a>
-      </div>
-    </div>
   </div>
 
   <?php

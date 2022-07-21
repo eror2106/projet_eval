@@ -25,7 +25,7 @@
 
 
 
-    <a target="_blank" href="<?php echo $value['lien']; ?>"><?php echo $value['nom_lien']; ?></a>
+    <a target="_blank" id="nostyle" href="<?php echo $value['lien']; ?>"><?php echo $value['nom_lien']; ?></a>
 
 
 
