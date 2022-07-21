@@ -19,56 +19,61 @@
   <div class="wraps" id="presantation">
     <?php
     for ($i = 0; $i <= sizeof($user) - 1; $i++) {
-      $img = 0;
-      foreach ($user[$i] as $article => $value) {
-        if ($img == 4) {
+      
+      if ($user[$i]['quantite'] > 0 || $user[$i]['quantite'] != null) {
+
+
+        $img = 0;
+        foreach ($user[$i] as $article => $value) {
+          if ($img == 4) {
     ?>
-          <div class="card cartes" style="width: 18rem">
-            <img src="img/shop/<?php echo $value; ?>
+            <div class="card cartes" style="width: 18rem">
+              <img src="img/shop/<?php echo $value; ?>
                               " class="card-img-top" alt="..." />
-            <div class="card-body">
-              <?php
-              $res = 0;
-              foreach ($user[$i] as $article => $value) {
-              ?>
-                <h5 class="card-title"><?php
-                                        if ($res == 1) {
-                                          echo "nom : " . $value;
-                                        } ?></h5>
-                <p>
+              <div class="card-body">
                 <?php
-                if ($res == 2) {
-                  echo "model : " . $value;
-                }
-                if ($res == 3) {
-                  echo "prix : " . $value . "€";
-                }
-                if ($res == 5) {
-                  echo "description : " . $value;
-                }
-                $res++;
-              }
-                ?>
-                </p>
-                <?php
-                $lg = 0;
+                $res = 0;
                 foreach ($user[$i] as $article => $value) {
-                  if ($lg == 1) {
                 ?>
-                    <a href="cube.php?ref=<?php
-                                          echo $value;
-                                          ?>" class="btn btn-outline-dark"> En voir plus </a><?php
+                  <h5 class="card-title"><?php
+                                          if ($res == 1) {
+                                            echo "nom : " . $value;
+                                          } ?></h5>
+                  <p>
+                  <?php
+                  if ($res == 2) {
+                    echo "model : " . $value;
+                  }
+                  if ($res == 3) {
+                    echo "prix : " . $value . "€";
+                  }
+                  if ($res == 5) {
+                    echo "description : " . $value;
+                  }
+                  $res++;
+                }
+                  ?>
+                  </p>
+                  <?php
+                  $lg = 0;
+                  foreach ($user[$i] as $article => $value) {
+                    if ($lg == 1) {
+                  ?>
+                      <a href="cube.php?ref=<?php
+                                            echo $value;
+                                            ?>" class="btn btn-outline-dark"> En voir plus </a><?php
                                                                                             }
                                                                                             $lg++;
                                                                                           } ?>
+              </div>
             </div>
-          </div>
     <?php
+          }
+          $img++;
         }
-        $img++;
+        $lg = 0;
+        $res = 0;
       }
-      $lg = 0;
-      $res = 0;
     }
     ?>
   </div>

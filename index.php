@@ -39,8 +39,8 @@
   </div>
 
 
-  <div class="wraps presantation">
-    <div class="card" style="width: 18rem;">
+  <div class="wraps presantation mb-1">
+    <div class="card " style="width: 18rem;">
       <a href="shop.php">
         <img src="img/rubiks-cube-145949_1280-1968539853.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -49,17 +49,14 @@
       </a>
 
     </div>
+
     <div class="card" style="width: 18rem;">
-      <img src="img/rubiks-cube-145949_1280-1968539853.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text text-center">accessoires</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="img/rubiks-cube-145949_1280-1968539853.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text text-center">tuto</p>
-      </div>
+      <a href="conseil.php">
+        <img src="img/rubiks-cube-145949_1280-1968539853.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-center">conseil</p>
+        </div>
+      </a>
     </div>
     <img src="img/carousel-slider-3423608208.png" alt="" />
   </div>
@@ -67,7 +64,6 @@
   include 'footer.php';
   ?>
   <script src="script/mains .js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 </body>
 
 </html>

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <?php 
+  <?php
   include "../navbar_admin.php"; ?>
   <div class="container col-md-5 col-md-offset-3">
     <div class="panel panel-info">
@@ -37,6 +37,10 @@
             <label class="col-sm-2 col-form-label">Description</label>
             <textarea type="text" name="Description" class="form-control-file" rows="4" cols="50"> </textarea>
           </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">quantité</label>
+            <input type="text" name="quantite" class="form-control-file">
+          </div>
           <div>
             <input type="submit" name="submit" value="valider">
           </div>
@@ -50,6 +54,7 @@
     $prix = "";
     $photo = "";
     $Description = "";
+    $quantité = "";
 
     if (isset($_POST['nom'])) {
       $nom = htmlspecialchars($_POST['nom']);
@@ -69,6 +74,9 @@
     }
     if (isset($_POST['Description'])) {
       $Description = htmlspecialchars($_POST['Description']);
+    }
+    if (isset($_POST['quantite'])) {
+      $quantite = htmlspecialchars($_POST['quantite']);
     }
 
     if (isset($_POST['submit'])) {
@@ -99,7 +107,7 @@
       $resultat = move_uploaded_file($tmpName, $file_name);
       include '../connexion.php';
 
-      $sql = $db->prepare("INSERT INTO `stock`( `nom`, `model`, `prix`, `images`, `description`) VALUES ('$nom','$model','$prix','$photo','$Description')");
+      $sql = $db->prepare("INSERT INTO `stock`( `nom`, `model`, `prix`, `images`, `description`,`quantite`) VALUES ('$nom','$model','$prix','$photo','$Description','$quantite')");
       $envoie = $sql->execute();
       if ($resultat) {
         echo "cube crée";

@@ -18,9 +18,24 @@
   $dsn = "mysql:dbname=" . DBNAME . ";host=" . DBHOST;
 
 
+
+
+
+
   try {
+
+
+
+    if (strcmp($_SERVER['ENVIRONMENT_TYPE'], "development") == 0) {
+      $db = new PDO($dsn, DBUSER, DBPASS);
+      $db->exec("SET NAMES utf8");
+    }
+    if (strcmp($_SERVER['ENVIRONMENT_TYPE'], "production") == 0) {
+      $db = new PDO($dsn, $_SERVER['DB_USER'], $_SERVER['DB_PASSWORD']);
+      $db->exec("SET NAMES utf8");
+    } /*
     $db = new PDO($dsn, DBUSER, DBPASS);
-    $db->exec("SET NAMES utf8");
+    $db->exec("SET NAMES utf8");*/
   } catch (PDOException $e) {
     die("Erreur : " . $e->getMessage());
   }

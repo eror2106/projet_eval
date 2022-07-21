@@ -68,7 +68,7 @@ $ref = $_GET['ref'];
         <button><a class="add" href="addpanier.php?id=<?= $user['id'] ?>">ajouter au panier</a></button>
       <?php }
       if ('admin' != $_SESSION['role'] && 'user' != $_SESSION['role'] || empty($_SESSION['role'])) { ?>
-        <button><a class="add" href="login.php">ajouter au panier</a></button>
+        <button><a class="add" href="register.php">ajouter au panier</a></button>
       <?php
       }
       ?>

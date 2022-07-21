@@ -2,6 +2,10 @@
 require 'crud/connexion.php';
 include 'crud/crud user/con_user.php';
 session_start();
+if (isset($_POST["role"])) {
+
+  $role = "user";
+}
 
 $err_de_con = "";
 $pseudo = "";

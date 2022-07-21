@@ -29,14 +29,17 @@
         <div class="card-body">
           <h5 class="card-title">pseudo : <?php echo $row[$i]['username']; ?></h5>
           <h6 class="card-subtitle mb-2 ">role : <?php echo $row[$i]['role']; ?></h6>
+          <form method="post">
+
+          </form>
 
         </div>
       </div>
     <?php
+
     }
     ?>
   </div>
-
 
 </body>
 

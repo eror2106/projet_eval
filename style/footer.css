@@ -7,13 +7,15 @@ footer {
 #primaire {
   display: flex;
   flex-wrap: wrap;
-  margin: 10%;
+  margin: 5%;
+  margin-top: 2%;
   margin-bottom: 0%;
 }
 .ligne {
   display: flex;
   flex-direction: column;
-  margin: 9%;
+  margin: 4%;
+  margin-left: 25%;
 }
 .ligne > strong {
   color: blue;
