@@ -3,9 +3,6 @@
 
 $ref = $_GET['ref'];
 
-// $sql = $db->prepare("  UPDATE `users` SET `role`='admin' WHERE `username`='$ref'");
-// $requete = $db->query($sql);
-
 
 $sql = " UPDATE `users` SET `role`='admin' WHERE `id`='$ref'";
 $requete = $db->query($sql);

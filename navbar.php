@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
     $_SESSION['role'] = array();
   }
 }  ?>
-<link rel="stylesheet" href="style/styles.css">
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid  d-flex flex-row ">
 
