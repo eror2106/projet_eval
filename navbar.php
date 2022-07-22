@@ -58,7 +58,7 @@ if (!isset($_SESSION)) {
         <?php
         if ($_SESSION['role'] == 'admin') { ?>
           <li class="nav-item">
-            <a class="nav-link" href="crud/crud shop/ajout.php">stock</a>
+            <a class="nav-link" href="crud/crud_shop/ajout.php">stock</a>
           </li>
         <?php } ?>
         <?php

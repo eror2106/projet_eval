@@ -3,6 +3,7 @@ footer {
   padding: 0;
   background-color: black;
   margin-bottom: 0px;
+  bottom:0;
 }
 #primaire {
   display: flex;

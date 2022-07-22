@@ -7,27 +7,27 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item ">
-          <a class="nav-link text-white active" aria-current="page" href="../crud shop/ajout.php">ajout</a>
+          <a class="nav-link text-white active" aria-current="page" href="../crud_shop/ajout.php">ajout</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-white" href="../crud shop/verificationref.php">maj</a>
+          <a class="nav-link text-white" href="../crud_shop/verificationref.php">maj</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-white" href="../crud shop/delete.php">Delete</a>
+          <a class="nav-link text-white" href="../crud_shop/delete.php">Delete</a>
         </li>
 
 
 
         <li class="nav-item ">
-          <a class="nav-link text-white active" aria-current="page" href="../crud slider/ajout.php">ajout slider</a>
-        </li>
-
-        <li class="nav-item ">
-          <a class="nav-link text-white" href="../crud slider/delete.php">Delete slider</a>
+          <a class="nav-link text-white active" aria-current="page" href="../crud_slider/ajout.php">ajout slider</a>
         </li>
 
         <li class="nav-item ">
-          <a class="nav-link text-white" href="../crud user/utilisateurs.php">utilisateurs</a>
+          <a class="nav-link text-white" href="../crud_slider/delete.php">Delete slider</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="../crud_user/utilisateurs.php">utilisateurs</a>
         </li>
 
         <li class="nav-item ">
