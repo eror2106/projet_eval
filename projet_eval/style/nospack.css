@@ -1,0 +1,18 @@
+
+.cartes {
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+.btn {
+  font-size: 1.2em !important;
+}
+.card-body {
+  text-align: center !important;
+}
+.wraps {
+  display: flex;
+  flex-wrap: wrap;
+}
+#accessoire {
+  margin-right: 33% !important;
+}

@@ -1,0 +1,49 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+table ,tr{
+  border: 1px solid black;
+  text-align: center;
+  width: 100%;
+}
+th{
+  background-color: rgb(78, 78, 78);
+  color: aliceblue;
+}
+section{
+  margin: 50px;
+  justify-content:center ;
+}
+
+p{
+  text-align:right;
+  margin-right: 10%;
+}
+.achat{
+  margin-left: 82% !important;
+  background-color: rgb(55, 55, 174);
+  color: aliceblue;
+  border: none;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 730px) {
+  .achat{
+    margin-left: 70% !important;
+    
+  
+  }
+  
+
+}
+@media only screen and (max-width: 630px) {
+  .achat{
+    margin-left: 60% !important;
+    
+  
+  }
+  
+
+}

@@ -1,0 +1,66 @@
+#presantation {
+  margin-top: 10%;
+  margin-left: 15% !important;
+}
+
+.cube {
+  margin-left: 10% !important;
+  width: 50%;
+height: 30em !important;
+  margin-right: 0% !important;
+}
+.cube > img {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-left: 20%;
+  margin-top: 15% !important;
+  height: 70%;
+  width: auto;
+}
+.rows {
+  display: flex;
+  flex-direction: row;
+  
+}
+.presantation{
+  margin-top: 5%;
+  margin-left:6vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.explication {
+  margin-right: 5% !important;
+  margin-top: 8%;
+  margin-left: 10%;
+}
+@media only screen and (max-width: 640px) {
+  .rows {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cube > img {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-left: 10%;
+    margin-top: 5% !important;
+
+    height: 50%;
+    width: 150%;
+  }
+  .explication {
+    margin-left: 15% !important;
+    margin-top: 8%;
+  }
+  #presantation {
+    margin-top: 5%;
+    margin-left: 15% !important;
+  }
+  
+
+}
