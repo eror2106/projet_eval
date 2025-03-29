@@ -1,5 +1,5 @@
 
-SetEnv ENVIRONMENT_TYPE development
+SetEnv ENVIRONMENT_TYPE "developement"
 SetEnv DB_HOST "localhost"
 SetEnv DB_USER "root"
 SetEnv DB_PASS ""
