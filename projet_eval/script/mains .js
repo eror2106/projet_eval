@@ -12,7 +12,6 @@ function enleve_active_img() {
 
 suivant.addEventListener("click", function () {
   etape++;
-  console.log("test");
 
   if (etape >= nb_img) {
     etape = 0;
