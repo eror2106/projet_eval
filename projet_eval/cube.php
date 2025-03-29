@@ -33,7 +33,7 @@ $ref = $_GET['ref'];
   include 'crud/connexion.php';
 
 
-  $sql = "SELECT * FROM `stock`WHERE `nom`='$ref'";
+  $sql = "SELECT * FROM `stock`WHERE `model`='$ref'";
   $requette = $db->query($sql);
 
 
@@ -42,7 +42,7 @@ $ref = $_GET['ref'];
   <div class="rows">
     <div class="cube">
 
-      <img src="img/shop/<?php echo $user['images'] ?>" alt="" />
+      <img src="img/shop/<?php echo $user['image'] ?>" alt="" />
     </div>
     <div class="columns explication">
 

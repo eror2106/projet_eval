@@ -32,10 +32,12 @@
     for ($i = 0; $i <= sizeof($user) - 1; $i++) {
 
       if ($user[$i]['quantite'] > 0 || $user[$i]['quantite'] != null) {
-
+        // echo $i;
 
         $img = 0;
         foreach ($user[$i] as $article => $value) {
+          // echo $article;
+          // echo $value;
           if ($img == 4) {
     ?>
             <div class="card cartes" style="width: 18rem">
@@ -43,7 +45,8 @@
                               " class="card-img-top" alt="..." />
               <div class="card-body">
                 <?php
-                $res = 0;
+                $res = 1;
+
                 foreach ($user[$i] as $article => $value) {
                 ?>
                   <h5 class="card-title"><?php
@@ -58,7 +61,11 @@
                   if ($res == 3) {
                     echo "prix : " . $value . "€";
                   }
-                  if ($res == 5) {
+                  if ($res == 4) {
+                    echo "quantité : " . $value;
+                  }
+
+                  if ($res == 6) {
                     echo "description : " . $value;
                   }
                   $res++;
