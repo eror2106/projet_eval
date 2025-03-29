@@ -1,0 +1,6 @@
+
+SetEnv ENVIRONMENT_TYPE development
+SetEnv DB_HOST "localhost"
+SetEnv DB_USER "root"
+SetEnv DB_PASS ""
+SetEnv DB_NAME ""
