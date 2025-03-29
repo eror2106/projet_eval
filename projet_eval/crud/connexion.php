@@ -40,7 +40,7 @@
         ''
 
       );
-      echo "conecté";
+      // echo "conecté";
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       error_reporting(E_ALL);
       ini_set('display_errors', 1);
